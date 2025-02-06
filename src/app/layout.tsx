@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
+import Loading from "./loading";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -25,11 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Suspense fallback={<Loading />}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
+      </Suspense>
     </html>
   );
 }
