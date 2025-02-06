@@ -63,15 +63,15 @@ export  async function CarList({makeId, year}: CarListProps) {
             key={vehicle.Model_ID}
             className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1"
           >
-            <div className="relative h-48 w-full bg-gray-200">
+            {/* <div className="relative h-48 w-full bg-gray-200">
               <Image
                 src={imageUrl}
                 alt={`${vehicle.Model_Name}`}
                 fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover "
+                sizes="(max-width: 375px) 100vw, (max-width: 768) 50vw, 33vw"
               />
-            </div>
+            </div> */}
             <div className="p-6">
               <h2 className="text-xl font-bold text-gray-800 mb-2">
                 {vehicle.Model_Name}
@@ -80,9 +80,9 @@ export  async function CarList({makeId, year}: CarListProps) {
                 <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
                   {year}
                 </span>
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                {/* <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                   Details
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
